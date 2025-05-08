@@ -140,36 +140,6 @@
     z-index: 10; /* Asegura que el producto esté por encima */
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(11, 230, 116, 0.1);
-    z-index: 999; /* Asegura que esté por encima de casi todo */
-    top: 100%;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none; /* Previene clics hasta que esté visible */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px);
-}
-
-.product-item:hover .submenu {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-.submenu p {
-    margin: 5px 0;
-    color: #555;
-    font-size: 0.9rem;
-}
 
 
         /* Estilos responsivos */
