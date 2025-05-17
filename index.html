@@ -268,6 +268,92 @@
     margin: 20mm;
   }
 }
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .navbar,
+  .footer,
+  .print-btn,
+  .search-container,
+  img,
+  .submenu {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .category {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .category h2 {
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: black;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+  }
+
+  .product-list {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .product-item h3,
+  .product-item p,
+  .price {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: black;
+  }
+
+  .product-item h3 {
+    flex: 2;
+  }
+
+  .product-item p {
+    flex: 3;
+    padding-left: 10px;
+  }
+
+  .price {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  @page {
+    margin: 8mm;
+    size: A4 portrait;
+  }
+}
 
   </style>
 
