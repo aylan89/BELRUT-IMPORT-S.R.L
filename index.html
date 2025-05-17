@@ -204,11 +204,79 @@
   margin-top: 40px;
   border-top: 1px solid #ddd;
 }
+.print-btn {
+  background-color: #0f9d58;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.print-btn:hover {
+  background-color: #0b7c43;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+@media print {
+  .print-btn {
+    display: none;
+  }
+}
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  .navbar,
+  .footer,
+  .print-btn,
+  .search-container {
+    display: none !important;
+  }
+
+  .category {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .category h2 {
+    background: none !important;
+    color: black !important;
+    border: none !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+
+  .product-item {
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  .product-item img {
+    max-height: 120px;
+    object-fit: contain;
+  }
+
+  @page {
+    margin: 20mm;
+  }
+}
 
   </style>
 
 </head>
   
+<div style="text-align: center; margin: 20px;">
+  <button onclick="window.print()" class="print-btn">🖨️ Imprimir / Guardar PDF</button>
+</div>
+
 <body>
     <header class="navbar">
         <div class="container">
